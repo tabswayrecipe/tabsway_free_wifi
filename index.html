@@ -2,16 +2,126 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Tabsway Kitchen WiFi</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* Maintain your background animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.social-buttons a {
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.social-buttons a:hover {
+    transform: scale(1.05);
+}
+
+.instagram { background: #E1306C; }
+.tiktok { background: #000000; }
+.facebook { background: #3b5998; }
+.google { background: #4285F4; }
+
+.review-promo {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.connect {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.connect:disabled {
+    background: #a1a1a1;
+    cursor: not-allowed;
+}
+
+/* Progress bar styling */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+    height: 15px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 10px;
+    transition: width 0.1s linear;
+}
+</style>
 
 </head>
 
@@ -21,48 +131,60 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <div class="container">
 
-<img src="logo-v2.png" class="logo">
+<img src="logo-v2.png" class="logo" alt="Tabsway Logo">
 
 <h1>Welcome to Tabsway Kitchen</h1>
-
 <p class="subtitle">Enjoy Free WiFi While Dining</p>
 
 <div class="social-buttons">
-
-<a href="https://instagram.com/tabsway" class="btn instagram">
-<i class="fa-brands fa-instagram"></i>
-Like & Follow our Instagram
+<a href="https://instagram.com/tabsway" class="btn instagram" target="_blank">
+<i class="fa-brands fa-instagram"></i> Like & Follow our Instagram
 </a>
 
-<a href="https://tiktok.com/@tabsway" class="btn tiktok">
-<i class="fa-brands fa-tiktok"></i>
-Follow us on TikTok
+<a href="https://tiktok.com/@tabsway" class="btn tiktok" target="_blank">
+<i class="fa-brands fa-tiktok"></i> Follow us on TikTok
 </a>
 
-<a href="https://facebook.com/tabsway" class="btn facebook">
-<i class="fa-brands fa-facebook"></i>
-Like our Facebook Page
+<a href="https://facebook.com/tabsway" class="btn facebook" target="_blank">
+<i class="fa-brands fa-facebook"></i> Like our Facebook Page
 </a>
 
-<a href="https://www.google.com/maps" class="btn google">
-<i class="fa-solid fa-star"></i>
-Give us a Google Review
+<a href="https://g.page/YOUR_GOOGLE_PLACE_ID/review" class="btn google" target="_blank">
+<i class="fa-solid fa-star"></i> Give us a Google Review
 </a>
-
 </div>
 
 <div class="review-promo">
+⭐ Leave a Google review and show it to staff to receive <b>5% OFF your next purchase</b>
+</div>
 
-⭐ Leave a Google review and show it to staff  
-to receive <b>5% OFF your next purchase</b>
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<button class="connect" id="connectBtn" disabled onclick="connectWifi()">Connect to WiFi</button>
 
 </div>
 
-<button class="connect" onclick="connectWifi()"> Connect to WiFi</button>
+<script>
+// Connect to UniFi guest WiFi in a new tab
+function connectWifi() {
+    window.open("$authUrl", "_blank");
+}
 
-</div>
-
-<script src="script.js"></script>
+// 10-second countdown progress bar
+let progressBar = document.getElementById("progressBar");
+let connectBtn = document.getElementById("connectBtn");
+let width = 0;
+let interval = setInterval(function() {
+    width += 1;
+    progressBar.style.width = width + '%';
+    if (width >= 100) {
+        clearInterval(interval);
+        connectBtn.disabled = false;
+    }
+}, 100); // 100ms per 1% → 10 seconds total
+</script>
 
 </body>
 </html>
