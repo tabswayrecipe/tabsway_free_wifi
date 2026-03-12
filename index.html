@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tabsway Kitchen WiFi</title>
 
-<!-- Link to external CSS -->
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -14,23 +14,27 @@
 
 <body>
 
+<!-- Background animation -->
+<div class="background-animation"></div>
+
 <div class="container">
+
     <img src="logo-v2.png" class="logo" alt="Tabsway Logo">
 
     <h1>Welcome to Tabsway Kitchen</h1>
     <p class="subtitle">Enjoy Free WiFi While Dining</p>
 
     <div class="social-buttons">
-        <a href="https://instagram.com/tabsway" class="instagram" target="_blank">
+        <a href="https://instagram.com/tabsway" class="btn instagram" target="_blank">
             <i class="fa-brands fa-instagram"></i> Instagram
         </a>
-        <a href="https://tiktok.com/@tabsway" class="tiktok" target="_blank">
+        <a href="https://tiktok.com/@tabsway" class="btn tiktok" target="_blank">
             <i class="fa-brands fa-tiktok"></i> TikTok
         </a>
-        <a href="https://facebook.com/tabsway" class="facebook" target="_blank">
+        <a href="https://facebook.com/tabsway" class="btn facebook" target="_blank">
             <i class="fa-brands fa-facebook"></i> Facebook
         </a>
-        <a href="https://g.page/YOUR_GOOGLE_PLACE_ID/review" class="google" target="_blank">
+        <a href="https://g.page/YOUR_GOOGLE_PLACE_ID/review" class="btn google" target="_blank">
             <i class="fa-solid fa-star"></i> Google Review
         </a>
     </div>
@@ -39,14 +43,16 @@
         ⭐ Leave a Google review and show it to staff to receive <b>5% OFF your next purchase</b>
     </div>
 
+    <!-- Progress bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <button class="connect" id="connectBtn" disabled onclick="connectWifi()">Connect to WiFi</button>
+
 </div>
 
-<!-- Link to external JS -->
+<!-- JS -->
 <script src="script.js"></script>
 
 </body>
