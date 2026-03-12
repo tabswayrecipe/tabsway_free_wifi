@@ -1,0 +1,301 @@
+body{
+
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#FEFAF4;
+overflow-x:hidden;
+
+}
+
+/* Animated gradient background */
+
+.background-animation{
+
+position:fixed;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+120deg,
+#CC4034,
+#FFC526,
+#6AA121,
+#E4BC91
+);
+
+background-size:400% 400%;
+
+animation:gradientMove 14s ease infinite;
+
+z-index:-1;
+
+}
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* Main container */
+
+.container{
+
+text-align:center;
+padding-top:90px;
+color:white;
+max-width:600px;
+margin:auto;
+
+}
+
+/* Logo */
+
+.logo{
+
+width:140px;
+animation:logoFade 2s ease;
+
+}
+
+@keyframes logoFade{
+
+0%{
+opacity:0;
+transform:translateY(-40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Text */
+
+h1{
+
+font-size:36px;
+margin-top:15px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+margin-bottom:30px;
+
+}
+
+/* Social buttons */
+
+.btn{
+
+display:block;
+width:260px;
+margin:12px auto;
+padding:14px;
+
+border-radius:8px;
+
+text-decoration:none;
+font-weight:bold;
+
+color:white;
+
+transition:.3s;
+
+}
+
+/* Brand colors */
+
+.instagram{ background:#CC4034; }
+
+.tiktok{
+background:#E4BC91;
+color:black;
+}
+
+.facebook{
+background:#FFC526;
+color:black;
+}
+
+.google{ background:#6AA121; }
+
+/* Icon spacing */
+
+.btn i{
+
+margin-right:10px;
+
+}
+
+/* Hover animation */
+
+.btn:hover{
+
+transform:scale(1.07);
+
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+}
+
+/* Review promotion box */
+
+.review-promo{
+
+margin-top:20px;
+
+font-size:16px;
+
+background:rgba(255,255,255,0.2);
+
+padding:15px;
+
+border-radius:10px;
+
+width:85%;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+/* Connect button */
+
+.connect{
+
+margin-top:25px;
+
+padding:16px 45px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:10px;
+
+background:#FEFAF4;
+
+color:#CC4034;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.connect:hover{
+
+background:#FFC526;
+
+transform:scale(1.1);
+
+}
+
+/* Floating animation shapes */
+
+.bubble{
+
+position:fixed;
+
+bottom:-100px;
+
+border-radius:50%;
+
+opacity:.5;
+
+animation:floatUp linear;
+
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+opacity:.5;
+}
+
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+
+}
+
+/* -------------------- */
+/* RESPONSIVE DESIGN */
+/* -------------------- */
+
+/* Tablet */
+
+@media (max-width:1024px){
+
+h1{
+font-size:30px;
+}
+
+.btn{
+width:230px;
+}
+
+}
+
+/* Phone */
+
+@media (max-width:768px){
+
+.logo{
+width:110px;
+}
+
+h1{
+font-size:26px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+.btn{
+width:85%;
+}
+
+.connect{
+width:85%;
+}
+
+.review-promo{
+width:90%;
+font-size:14px;
+}
+
+}
+
+/* Small phones */
+
+@media (max-width:480px){
+
+h1{
+font-size:22px;
+}
+
+.subtitle{
+font-size:14px;
+}
+
+.btn{
+padding:12px;
+}
+
+.connect{
+padding:14px;
+}
+
+}
