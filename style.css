@@ -1,3 +1,6 @@
+/* ------------------ */
+/* BODY & BACKGROUND */
+/* ------------------ */
 body{
   margin:0;
   font-family:'Segoe UI',sans-serif;
@@ -28,7 +31,9 @@ body{
   100%{background-position:0% 50%;}
 }
 
-/* Floating bubbles */
+/* ------------------ */
+/* FLOATING BUBBLES */
+/* ------------------ */
 .bubble{
   position:fixed;
   bottom:-150px;
@@ -49,7 +54,9 @@ body{
   100%{transform:translateY(-120vh) rotate(360deg); opacity:0;}
 }
 
-/* Main container with single glass frame */
+/* ------------------ */
+/* MAIN CONTAINER */
+/* ------------------ */
 .container{
   text-align:center;
   padding:60px 20px;
@@ -60,12 +67,12 @@ body{
   position:relative;
   z-index:2;
 
-  background:rgba(255,255,255,0.15); /* frosted glass */
+  background:rgba(255,255,255,0.15); /* single frosted frame */
   border-radius:20px;
   backdrop-filter:blur(15px) saturate(150%);
   -webkit-backdrop-filter:blur(15px) saturate(150%);
   border:1px solid rgba(255,255,255,0.25);
-  box-shadow:0 8px 20px rgba(0,0,0,0.15); /* softer container shadow */
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* Logo */
@@ -82,7 +89,9 @@ body{
 h1{font-size:36px; margin-top:15px;}
 .subtitle{font-size:18px; margin-bottom:30px;}
 
-/* Social buttons inside single frame */
+/* ------------------ */
+/* SOCIAL BUTTONS */
+/* ------------------ */
 .btn{
   display:block;
   width:260px;
@@ -93,22 +102,28 @@ h1{font-size:36px; margin-top:15px;}
   font-weight:bold;
   color:white;
   transition:.35s;
-  box-shadow:none; /* remove inner shadow to avoid double frame */
+
+  background: rgba(255,255,255,0); /* fully transparent to show bubbles */
+  box-shadow:none;
+  backdrop-filter:blur(5px); /* optional slight blur for readability */
 }
-
-/* Native social colors */
-.instagram{ background:#E4405F; }
-.tiktok{ background:#000000; }
-.facebook{ background:#1877F2; }
-.google{ background:#34A853; }
-
-.btn i{ margin-right:10px; }
 
 .btn:hover{
   transform:scale(1.08);
+  background: rgba(255,255,255,0.05); /* subtle highlight only on hover */
 }
 
-/* Review promo */
+/* Native social colors (for icon only) */
+.instagram i{ color:#E4405F; }
+.tiktok i{ color:#000000; }
+.facebook i{ color:#1877F2; }
+.google i{ color:#34A853; }
+
+.btn i{ margin-right:10px; }
+
+/* ------------------ */
+/* REVIEW PROMO BOX */
+/* ------------------ */
 .review-promo{
   margin-top:20px;
   font-size:16px;
@@ -121,7 +136,9 @@ h1{font-size:36px; margin-top:15px;}
   backdrop-filter:blur(10px);
 }
 
-/* Loading bar */
+/* ------------------ */
+/* PROGRESS BAR */
+/* ------------------ */
 .progress-container{
   width:85%;
   height:12px;
@@ -146,7 +163,9 @@ h1{font-size:36px; margin-top:15px;}
   100%{background-position:200%;}
 }
 
-/* Connect button inside single frame */
+/* ------------------ */
+/* CONNECT BUTTON */
+/* ------------------ */
 .connect{
   margin-top:28px;
   padding:16px 45px;
@@ -181,7 +200,9 @@ h1{font-size:36px; margin-top:15px;}
   box-shadow:none;
 }
 
-/* Responsive */
+/* ------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------ */
 @media (max-width:1024px){
   h1{font-size:30px;}
   .btn{width:230px;}
