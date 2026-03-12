@@ -19,7 +19,8 @@ function connectWifi() {
       connectBtn.textContent = "Connected ✅";
       connectBtn.disabled = false;          // enable button if needed
       // Optional: redirect to $authUrl after full progress
-      // window.location.href = "$authUrl";
+       window.location.href = "$authUrl";
     }
   }, 30); // speed of progress (30ms per step)
 }
+
