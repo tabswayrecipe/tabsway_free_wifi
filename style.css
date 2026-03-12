@@ -160,7 +160,7 @@ h1{
   100%{background-position:200%;}
 }
 
-/* Connect WiFi button */
+/* Connect WiFi button with pulse */
 .connect{
   margin-top:28px;
   padding:16px 45px;
@@ -174,10 +174,23 @@ h1{
   transition:.35s;
   box-shadow:0 8px 20px rgba(0,0,0,.35);
 }
+
 .connect:hover{
   transform:scale(1.1);
   box-shadow:0 12px 28px rgba(0,0,0,.45);
 }
+
+/* Pulse animation while loading */
+.connect.pulse{
+  animation:buttonPulse 1.5s infinite;
+}
+
+@keyframes buttonPulse{
+  0%{transform:scale(1); box-shadow:0 8px 20px rgba(0,0,0,.35);}
+  50%{transform:scale(1.08); box-shadow:0 12px 28px rgba(0,0,0,.45);}
+  100%{transform:scale(1); box-shadow:0 8px 20px rgba(0,0,0,.35);}
+}
+
 .connect:disabled{
   background:#d9d9d9;
   color:#666;
@@ -198,10 +211,10 @@ h1{
 /* Phone */
 @media (max-width:768px){
   .logo{ width:100px; }
-  h1{ font-size:24px; }
+  h1{ font-size:22px; }
   .subtitle{ font-size:14px; }
-  .btn{ width:95%; }
-  .connect{ width:95%; padding:14px; }
+  .btn{ width:95%; font-size:14px; padding:12px; }
+  .connect{ width:95%; padding:14px; font-size:16px; }
   .review-promo{ width:95%; font-size:14px; }
   .progress-container{ width:95%; }
   
@@ -217,8 +230,8 @@ h1{
 @media (max-width:480px){
   h1{ font-size:20px; }
   .subtitle{ font-size:12px; }
-  .btn{ padding:10px; font-size:14px; }
-  .connect{ padding:12px; font-size:16px; }
+  .btn{ padding:10px; font-size:12px; }
+  .connect{ padding:12px; font-size:14px; }
   .review-promo{ font-size:12px; }
   .progress-container{ height:10px; }
 }
