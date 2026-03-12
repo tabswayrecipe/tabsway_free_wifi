@@ -49,7 +49,7 @@ body{
   100%{transform:translateY(-120vh) rotate(360deg); opacity:0;}
 }
 
-/* Main container with glass effect */
+/* Main container with single glass frame */
 .container{
   text-align:center;
   padding:60px 20px;
@@ -60,12 +60,12 @@ body{
   position:relative;
   z-index:2;
 
-  background:rgba(255,255,255,0.1);
+  background:rgba(255,255,255,0.15); /* frosted glass */
   border-radius:20px;
   backdrop-filter:blur(15px) saturate(150%);
   -webkit-backdrop-filter:blur(15px) saturate(150%);
   border:1px solid rgba(255,255,255,0.25);
-  box-shadow:0 8px 32px rgba(0,0,0,0.25);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15); /* softer container shadow */
 }
 
 /* Logo */
@@ -82,7 +82,7 @@ body{
 h1{font-size:36px; margin-top:15px;}
 .subtitle{font-size:18px; margin-bottom:30px;}
 
-/* Social buttons */
+/* Social buttons inside single frame */
 .btn{
   display:block;
   width:260px;
@@ -93,7 +93,7 @@ h1{font-size:36px; margin-top:15px;}
   font-weight:bold;
   color:white;
   transition:.35s;
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  box-shadow:none; /* remove inner shadow to avoid double frame */
 }
 
 /* Native social colors */
@@ -106,7 +106,6 @@ h1{font-size:36px; margin-top:15px;}
 
 .btn:hover{
   transform:scale(1.08);
-  box-shadow:0 12px 28px rgba(0,0,0,.35);
 }
 
 /* Review promo */
@@ -147,7 +146,7 @@ h1{font-size:36px; margin-top:15px;}
   100%{background-position:200%;}
 }
 
-/* Connect button */
+/* Connect button inside single frame */
 .connect{
   margin-top:28px;
   padding:16px 45px;
@@ -159,20 +158,19 @@ h1{font-size:36px; margin-top:15px;}
   font-weight:bold;
   cursor:pointer;
   transition:.35s;
-  box-shadow:0 8px 20px rgba(0,0,0,.35);
+  box-shadow:none; /* remove inner shadow */
 }
 .connect:hover{
   transform:scale(1.1);
-  box-shadow:0 12px 28px rgba(0,0,0,.45);
 }
 /* Pulse animation while loading */
 .connect.pulse{
   animation:buttonPulse 1.5s infinite;
 }
 @keyframes buttonPulse{
-  0%{transform:scale(1); box-shadow:0 8px 20px rgba(0,0,0,.35);}
-  50%{transform:scale(1.08); box-shadow:0 12px 28px rgba(0,0,0,.45);}
-  100%{transform:scale(1); box-shadow:0 8px 20px rgba(0,0,0,.35);}
+  0%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+  100%{transform:scale(1);}
 }
 
 /* Disabled button */
