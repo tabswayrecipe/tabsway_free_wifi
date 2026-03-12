@@ -1,6 +1,3 @@
-/* ------------------ */
-/* BODY & BACKGROUND */
-/* ------------------ */
 body{
   margin:0;
   font-family:'Segoe UI',sans-serif;
@@ -8,32 +5,23 @@ body{
   overflow-x:hidden;
 }
 
-/* Animated gradient background */
+/* Gradient background */
 .background-animation{
   position:fixed;
   width:100%;
   height:100%;
-  background:linear-gradient(
-    120deg,
-    #CC4034,
-    #FFC526,
-    #6AA121,
-    #E4BC91
-  );
+  background:linear-gradient(120deg,#CC4034,#FFC526,#6AA121,#E4BC91);
   background-size:400% 400%;
   animation:gradientMove 14s ease infinite;
   z-index:-2;
 }
-
 @keyframes gradientMove{
   0%{background-position:0% 50%;}
   50%{background-position:100% 50%;}
   100%{background-position:0% 50%;}
 }
 
-/* ------------------ */
-/* FLOATING BUBBLES */
-/* ------------------ */
+/* Floating bubbles */
 .bubble{
   position:fixed;
   bottom:-150px;
@@ -42,21 +30,17 @@ body{
   box-shadow:0 0 20px rgba(255,255,255,0.35);
   animation:floatUp linear infinite;
 }
-
 .b1{width:60px;height:60px;left:10%;animation-duration:14s;}
 .b2{width:40px;height:40px;left:25%;animation-duration:18s;}
 .b3{width:80px;height:80px;left:50%;animation-duration:22s;}
 .b4{width:50px;height:50px;left:70%;animation-duration:16s;}
 .b5{width:70px;height:70px;left:85%;animation-duration:20s;}
-
 @keyframes floatUp{
   0%{transform:translateY(0) rotate(0deg); opacity:.6;}
   100%{transform:translateY(-120vh) rotate(360deg); opacity:0;}
 }
 
-/* ------------------ */
-/* MAIN CONTAINER */
-/* ------------------ */
+/* Container */
 .container{
   text-align:center;
   padding:60px 20px;
@@ -66,13 +50,16 @@ body{
   margin:auto;
   position:relative;
   z-index:2;
-
-  background:rgba(255,255,255,0.15); /* single frosted frame */
+  background:rgba(255,255,255,0.15);
   border-radius:20px;
   backdrop-filter:blur(15px) saturate(150%);
   -webkit-backdrop-filter:blur(15px) saturate(150%);
   border:1px solid rgba(255,255,255,0.25);
   box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:15px;
 }
 
 /* Logo */
@@ -89,56 +76,42 @@ body{
 h1{font-size:36px; margin-top:15px;}
 .subtitle{font-size:18px; margin-bottom:30px;}
 
-/* ------------------ */
-/* SOCIAL BUTTONS */
-/* ------------------ */
+/* Social buttons */
 .btn{
-  display:block;
-  width:260px;
-  margin:12px auto;
+  width:100%;
+  max-width:260px;
   padding:14px;
   border-radius:12px;
-  text-decoration:none;
   font-weight:bold;
+  text-decoration:none;
   color:white;
   transition:.35s;
-
-  background: rgba(255,255,255,0); /* fully transparent to show bubbles */
+  background: rgba(255,255,255,0);
   box-shadow:none;
-  backdrop-filter:blur(5px); /* optional slight blur for readability */
+  text-align:center;
 }
-
 .btn:hover{
-  transform:scale(1.08);
-  background: rgba(255,255,255,0.05); /* subtle highlight only on hover */
+  transform:scale(1.05);
+  background: rgba(255,255,255,0.05);
 }
-
-/* Native social colors (for icon only) */
+/* Icon colors */
 .instagram i{ color:#E4405F; }
-.tiktok i{ color:#000000; }
+.tiktok i{ color:#000; }
 .facebook i{ color:#1877F2; }
 .google i{ color:#34A853; }
-
 .btn i{ margin-right:10px; }
 
-/* ------------------ */
-/* REVIEW PROMO BOX */
-/* ------------------ */
+/* Review promo */
 .review-promo{
-  margin-top:20px;
   font-size:16px;
   background:rgba(255,255,255,0.15);
   padding:15px;
   border-radius:16px;
   width:85%;
-  margin-left:auto;
-  margin-right:auto;
   backdrop-filter:blur(10px);
 }
 
-/* ------------------ */
-/* PROGRESS BAR */
-/* ------------------ */
+/* Progress bar */
 .progress-container{
   width:85%;
   height:12px;
@@ -149,7 +122,6 @@ h1{font-size:36px; margin-top:15px;}
   overflow:hidden;
   box-shadow:0 4px 12px rgba(0,0,0,.2);
 }
-
 .progress-bar{
   height:100%;
   width:0%;
@@ -163,9 +135,7 @@ h1{font-size:36px; margin-top:15px;}
   100%{background-position:200%;}
 }
 
-/* ------------------ */
-/* CONNECT BUTTON */
-/* ------------------ */
+/* Connect button */
 .connect{
   margin-top:28px;
   padding:16px 45px;
@@ -177,36 +147,22 @@ h1{font-size:36px; margin-top:15px;}
   font-weight:bold;
   cursor:pointer;
   transition:.35s;
-  box-shadow:none; /* remove inner shadow */
+  box-shadow:none;
 }
-.connect:hover{
-  transform:scale(1.1);
-}
-/* Pulse animation while loading */
-.connect.pulse{
-  animation:buttonPulse 1.5s infinite;
-}
+.connect:hover{ transform:scale(1.1); }
+.connect.pulse{ animation:buttonPulse 1.5s infinite; }
 @keyframes buttonPulse{
   0%{transform:scale(1);}
   50%{transform:scale(1.08);}
   100%{transform:scale(1);}
 }
-
-/* Disabled button */
 .connect:disabled{
   background:#d9d9d9;
   color:#666;
   cursor:not-allowed;
-  box-shadow:none;
 }
 
-/* ------------------ */
-/* RESPONSIVE DESIGN */
-/* ------------------ */
-@media (max-width:1024px){
-  h1{font-size:30px;}
-  .btn{width:230px;}
-}
+/* Responsive */
 @media (max-width:768px){
   .logo{width:100px;}
   h1{font-size:22px;}
