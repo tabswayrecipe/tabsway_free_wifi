@@ -1,42 +1,19 @@
-const colors = [
-"#CC4034",
-"#FFC526",
-"#6AA121",
-"#E4BC91"
-]
+// script.js
 
-function createBubble(){
-
-const bubble = document.createElement("div")
-
-bubble.classList.add("bubble")
-
-document.body.appendChild(bubble)
-
-const size = Math.random()*60
-
-bubble.style.width = size + "px"
-bubble.style.height = size + "px"
-
-bubble.style.left = Math.random()*window.innerWidth + "px"
-
-bubble.style.background =
-colors[Math.floor(Math.random()*colors.length)]
-
-bubble.style.animationDuration =
-6 + Math.random()*5 + "s"
-
-setTimeout(()=>{
-bubble.remove()
-},8000)
-
+// Function to connect to UniFi guest WiFi in a new tab
+function connectWifi() {
+    window.open("$authUrl", "_blank");
 }
 
-function connectWifi(){
-
-window.location.href="https://google.com"
-
-}
-
-
-setInterval(createBubble,700)
+// 10-second countdown progress bar
+let progressBar = document.getElementById("progressBar");
+let connectBtn = document.getElementById("connectBtn");
+let width = 0;
+let interval = setInterval(function() {
+    width += 1;
+    progressBar.style.width = width + '%';
+    if (width >= 100) {
+        clearInterval(interval);
+        connectBtn.disabled = false;
+    }
+}, 100); // 100ms per 1% → 10 seconds total
