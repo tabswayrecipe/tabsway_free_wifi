@@ -153,21 +153,23 @@ h1{
 }
 
 /* Connect button */
+/* Connect button */
 .connect{
     margin-top:25px;
     padding:16px 45px;
     font-size:18px;
     border:none;
     border-radius:10px;
-    background:#28A745; /* new green color */
-    color:white;
+
+    background:#FF1493; /* vibrant pink */
+    color:white;        /* text color */
     font-weight:bold;
     cursor:pointer;
     transition:.3s;
 }
 
 .connect:hover{
-    background:#218838; /* darker green on hover */
+    background:#E01187; /* darker pink on hover */
     transform:scale(1.1);
 }
 
@@ -180,3 +182,4 @@ h1{
     .connect{width:85%;}
     .review-promo{width:90%;font-size:14px;}
 }
+
