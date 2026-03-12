@@ -2,20 +2,21 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Tabsway Kitchen WiFi</title>
 
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<!-- Animated gradient background -->
 <div class="background-animation"></div>
 
 <!-- Floating bubbles -->
@@ -25,52 +26,57 @@
 <div class="bubble b4"></div>
 <div class="bubble b5"></div>
 
-<!-- Main container -->
 <div class="container">
 
-  <!-- Logo -->
-  <img src="logo-v2.png" class="logo" alt="Tabsway Kitchen Logo">
+<img src="logo-v2.png" class="logo">
 
-  <!-- Text -->
-  <h1>Welcome to Tabsway Kitchen</h1>
-  <p class="subtitle">Enjoy Free WiFi While Dining</p>
+<h1>Welcome to Tabsway Kitchen</h1>
 
-  <!-- Social buttons -->
-  <div class="social-buttons">
-    <a href="https://instagram.com/tabsway" class="btn instagram" target="_blank">
-      <i class="fa-brands fa-instagram"></i>Like & Follow our Instagram
-    </a>
+<p class="subtitle">Enjoy Free WiFi While Dining</p>
 
-    <a href="https://tiktok.com/@tabsway" class="btn tiktok" target="_blank">
-      <i class="fa-brands fa-tiktok"></i>Follow us on TikTok
-    </a>
+<div class="social-buttons">
 
-    <a href="https://facebook.com/tabsway" class="btn facebook" target="_blank">
-      <i class="fa-brands fa-facebook"></i>Like our Facebook Page
-    </a>
+<a href="https://instagram.com/tabsway" class="btn instagram" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+Like & Follow our Instagram
+</a>
 
-    <a href="https://www.google.com/maps" class="btn google" target="_blank">
-      <i class="fa-solid fa-star"></i>Give us a Google Review
-    </a>
-  </div>
+<a href="https://tiktok.com/@tabsway" class="btn tiktok" target="_blank">
+<i class="fa-brands fa-tiktok"></i>
+Follow us on TikTok
+</a>
 
-  <!-- Review promo -->
-  <div class="review-promo">
-    ⭐ Leave a Google review and show it to staff  
-    to receive <b>5% OFF your next purchase</b>
-  </div>
+<a href="https://facebook.com/tabsway" class="btn facebook" target="_blank">
+<i class="fa-brands fa-facebook"></i>
+Like our Facebook Page
+</a>
 
-  <!-- Connect WiFi button -->
-  <button class="connect" onclick="connectWifi()">Connect to WiFi</button>
-
-  <!-- Loading bar -->
-  <div class="progress-container">
-    <div class="progress-bar"></div>
-  </div>
+<a href="https://g.page/YOUR_GOOGLE_PLACE_ID/review" class="btn google" target="_blank">
+<i class="fa-solid fa-star"></i>
+Give us a Google Review
+</a>
 
 </div>
 
-<!-- Script -->
+<div class="review-promo">
+
+⭐ Leave a Google review and show it to staff  
+to receive <b>5% OFF your next purchase</b>
+
+</div>
+
+<div class="progress-container">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<button class="connect" id="connectBtn" disabled onclick="connectWifi()">
+
+Connect to WiFi
+
+</button>
+
+</div>
+
 <script src="script.js"></script>
 
 </body>
