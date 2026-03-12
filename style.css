@@ -1,42 +1,55 @@
 body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:#FEFAF4;
-  overflow-x:hidden;
+
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#FEFAF4;
+overflow-x:hidden;
+
 }
 
 /* Animated gradient background */
+
 .background-animation{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:linear-gradient(
-    120deg,
-    #CC4034,
-    #FFC526,
-    #6AA121,
-    #E4BC91
-  );
-  background-size:400% 400%;
-  animation:gradientMove 14s ease infinite;
-  z-index:-2;
+
+position:fixed;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+120deg,
+#CC4034,
+#FFC526,
+#6AA121,
+#E4BC91
+);
+
+background-size:400% 400%;
+animation:gradientMove 14s ease infinite;
+
+z-index:-2;
+
 }
 
 @keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
 }
 
 /* Floating bubbles */
+
 .bubble{
-  position:fixed;
-  bottom:-150px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.25);
-  box-shadow:0 0 20px rgba(255,255,255,0.35);
-  animation:floatUp linear infinite;
+
+position:fixed;
+bottom:-150px;
+border-radius:50%;
+background:rgba(255,255,255,0.25);
+animation:floatUp linear infinite;
+
 }
+
 .b1{width:60px;height:60px;left:10%;animation-duration:14s;}
 .b2{width:40px;height:40px;left:25%;animation-duration:18s;}
 .b3{width:80px;height:80px;left:50%;animation-duration:22s;}
@@ -44,194 +57,205 @@ body{
 .b5{width:70px;height:70px;left:85%;animation-duration:20s;}
 
 @keyframes floatUp{
-  0%{transform:translateY(0) rotate(0deg); opacity:.6;}
-  100%{transform:translateY(-120vh) rotate(360deg); opacity:0;}
+
+0%{
+transform:translateY(0);
+opacity:.6;
 }
 
-/* Main container with glass effect */
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+/* Container */
+
 .container{
-  text-align:center;
-  padding:60px 20px;
-  color:white;
-  width:90%;
-  max-width:600px;
-  margin:auto;
-  position:relative;
-  z-index:2;
-  
-  background:rgba(255,255,255,0.1);
-  border-radius:20px;
-  backdrop-filter:blur(15px) saturate(150%);
-  -webkit-backdrop-filter:blur(15px) saturate(150%);
-  border:1px solid rgba(255,255,255,0.25);
-  box-shadow:0 8px 32px rgba(0,0,0,0.25);
+
+text-align:center;
+padding-top:90px;
+color:white;
+max-width:600px;
+margin:auto;
+position:relative;
+z-index:2;
+
 }
 
 /* Logo */
+
 .logo{
-  width:140px;
-  animation:logoFade 2s ease;
+
+width:140px;
+animation:logoFade 2s ease;
+
 }
+
 @keyframes logoFade{
-  0%{opacity:0; transform:translateY(-40px);}
-  100%{opacity:1; transform:translateY(0);}
+
+0%{
+opacity:0;
+transform:translateY(-40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
 }
 
 /* Text */
+
 h1{
-  font-size:36px;
-  margin-top:15px;
-}
-.subtitle{
-  font-size:18px;
-  margin-bottom:30px;
+
+font-size:36px;
+margin-top:15px;
+
 }
 
-/* Social buttons */
+.subtitle{
+
+font-size:18px;
+margin-bottom:30px;
+
+}
+
+/* Buttons */
+
 .btn{
-  display:block;
-  width:260px;
-  margin:12px auto;
-  padding:14px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-  color:white;
-  transition:.35s;
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
+
+display:block;
+width:260px;
+margin:12px auto;
+padding:14px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+transition:.3s;
+
 }
 
 /* Native social colors */
-.instagram{ background:#E4405F; }
-.tiktok{ background:#000000; }
-.facebook{ background:#1877F2; }
-.google{ background:#34A853; }
+
+.instagram{
+background:#E4405F;
+}
+
+.tiktok{
+background:#000000;
+}
+
+.facebook{
+background:#1877F2;
+}
+
+.google{
+background:#34A853;
+}
 
 /* Icon spacing */
-.btn i{ margin-right:10px; }
 
-/* Hover animation */
+.btn i{
+
+margin-right:10px;
+
+}
+
+/* Hover */
+
 .btn:hover{
-  transform:scale(1.08);
-  box-shadow:0 12px 28px rgba(0,0,0,.35);
+
+transform:scale(1.07);
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+
 }
 
-/* Review promotion box */
+/* Review promo */
+
 .review-promo{
-  margin-top:20px;
-  font-size:16px;
-  background:rgba(255,255,255,0.15);
-  padding:15px;
-  border-radius:16px;
-  width:85%;
-  margin-left:auto;
-  margin-right:auto;
-  backdrop-filter:blur(10px);
+
+margin-top:20px;
+font-size:16px;
+
+background:rgba(255,255,255,0.2);
+padding:15px;
+border-radius:10px;
+
+width:85%;
+margin-left:auto;
+margin-right:auto;
+
 }
 
-/* Loading bar container */
+/* Progress bar */
+
 .progress-container{
-  width:85%;
-  height:12px;
-  background:rgba(255,255,255,0.25);
-  margin:auto;
-  margin-top:25px;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,.2);
+
+width:85%;
+height:10px;
+background:rgba(255,255,255,0.3);
+margin:auto;
+margin-top:20px;
+border-radius:20px;
+
 }
 
-/* Animated loading bar */
 .progress-bar{
-  height:100%;
-  width:0%;
-  background:linear-gradient(
-    90deg,
-    #FFC526,
-    #FEFAF4,
-    #FFC526
-  );
-  background-size:200% 100%;
-  border-radius:20px;
-  animation:progressGlow 2s linear infinite;
-}
-@keyframes progressGlow{
-  0%{background-position:0%;}
-  100%{background-position:200%;}
+
+height:100%;
+width:0%;
+background:#FEFAF4;
+border-radius:20px;
+
 }
 
-/* Connect WiFi button with pulse */
+/* Connect button */
+
 .connect{
-  margin-top:28px;
-  padding:16px 45px;
-  font-size:18px;
-  border:none;
-  border-radius:18px;
-  background:linear-gradient(45deg,#FFC526,#CC4034);
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  transition:.35s;
-  box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+margin-top:25px;
+padding:16px 45px;
+font-size:18px;
+
+border:none;
+border-radius:10px;
+
+background:#FEFAF4;
+color:#CC4034;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
 }
 
 .connect:hover{
-  transform:scale(1.1);
-  box-shadow:0 12px 28px rgba(0,0,0,.45);
+
+background:#FFC526;
+transform:scale(1.1);
+
 }
 
-/* Pulse animation while loading */
-.connect.pulse{
-  animation:buttonPulse 1.5s infinite;
-}
+/* Responsive */
 
-@keyframes buttonPulse{
-  0%{transform:scale(1); box-shadow:0 8px 20px rgba(0,0,0,.35);}
-  50%{transform:scale(1.08); box-shadow:0 12px 28px rgba(0,0,0,.45);}
-  100%{transform:scale(1); box-shadow:0 8px 20px rgba(0,0,0,.35);}
-}
-
-.connect:disabled{
-  background:#d9d9d9;
-  color:#666;
-  cursor:not-allowed;
-  box-shadow:none;
-}
-
-/* -------------------- */
-/* RESPONSIVE DESIGN */
-/* -------------------- */
-
-/* Tablet */
-@media (max-width:1024px){
-  h1{ font-size:30px; }
-  .btn{ width:230px; }
-}
-
-/* Phone */
 @media (max-width:768px){
-  .logo{ width:100px; }
-  h1{ font-size:22px; }
-  .subtitle{ font-size:14px; }
-  .btn{ width:95%; font-size:14px; padding:12px; }
-  .connect{ width:95%; padding:14px; font-size:16px; }
-  .review-promo{ width:95%; font-size:14px; }
-  .progress-container{ width:95%; }
-  
-  /* bubbles smaller on phone */
-  .b1{width:40px;height:40px;}
-  .b2{width:30px;height:30px;}
-  .b3{width:50px;height:50px;}
-  .b4{width:35px;height:35px;}
-  .b5{width:45px;height:45px;}
-}
 
-/* Small phones */
-@media (max-width:480px){
-  h1{ font-size:20px; }
-  .subtitle{ font-size:12px; }
-  .btn{ padding:10px; font-size:12px; }
-  .connect{ padding:12px; font-size:14px; }
-  .review-promo{ font-size:12px; }
-  .progress-container{ height:10px; }
+.logo{width:110px;}
+
+h1{font-size:26px;}
+
+.subtitle{font-size:16px;}
+
+.btn{width:85%;}
+
+.connect{width:85%;}
+
+.review-promo{width:90%;font-size:14px;}
+
 }
