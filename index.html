@@ -58,11 +58,23 @@ h1 {
 }
 
 .review-promo {
-  margin: 8px 0 !important;
+  margin: 10px 0 !important;
+  color: #000;              /* 🔥 FORCE BLACK TEXT */
+  font-weight: 600;         /* make it stand out */
+  text-align: center;
 }
 
+/* CENTER PROGRESS BAR */
 .progress-container {
-  margin: 8px 0 !important;
+  margin: 12px auto !important;
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 100%;
 }
 
 /* CONNECT BUTTON HIGHER */
@@ -90,7 +102,7 @@ h1 {
   font-weight: 600;
   font-size: 15px;
   margin: 5px 0;
-  min-width: 250px;  /* optional: uniform width */
+  min-width: 250px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   transition: all 0.2s ease;
 }
@@ -113,7 +125,7 @@ h1 {
 
 /* SNAPCHAT BUTTON EXTRA */
 .btn.snapchat-dark i {
-  margin-left: -2px; /* aligns icon visually with text */
+  margin-left: -2px;
 }
 
 </style>
@@ -174,7 +186,7 @@ to receive <b>5% OFF your next purchase</b>
 </div>
 
 <div class="progress-container">
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 </div>
 
 <button class="connect" id="connectBtn" disabled onclick="connectWifi()">
