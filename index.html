@@ -13,6 +13,108 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<style>
+
+/* REMOVE ALL TOP SPACE */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* PULL CONTENT UP */
+.container {
+  margin-top: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+
+/* LOGO IMPROVEMENT */
+.logo {
+  width: 140px;              
+  max-width: 80%;
+  margin-top: 0 !important;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+/* TIGHTEN HEADER */
+h1 {
+  margin: 5px 0;
+}
+
+.subtitle {
+  margin: 0 0 10px 0;
+}
+
+/* REDUCE SPACING */
+.social-buttons {
+  margin-top: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+.review-promo {
+  margin: 8px 0 !important;
+}
+
+.progress-container {
+  margin: 8px 0 !important;
+}
+
+/* CONNECT BUTTON HIGHER */
+.connect {
+  margin-top: 10px !important;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* BUTTON UNIFORMITY */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 5px 0;
+  min-width: 250px;  /* optional: uniform width */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+/* BUTTON COLORS */
+.btn.instagram { background-color: #E1306C; color: #fff; }
+.btn.tiktok { background-color: #000; color: #fff; }
+.btn.facebook { background-color: #1877F2; color: #fff; }
+.btn.snapchat-dark { background-color: #FFFC00; color: #000; }
+.btn.google { background-color: #4285F4; color: #fff; }
+
+/* HOVER EFFECTS */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* SNAPCHAT BUTTON EXTRA */
+.btn.snapchat-dark i {
+  margin-left: -2px; /* aligns icon visually with text */
+}
+
+</style>
+
 </head>
 
 <body>
@@ -41,62 +143,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 Like & Follow our Instagram
 </a>
 
-<a href="https://www.tiktok.com/@tabsway.kitchen.usa?_r=1&_d=secCgYIASAHKAESPgo8X8m0e8mEwooDVYZdHd3ZhSqQpirRpbudO6MQQRNf7OcaFFTQOfPeicnsaL6mtlSDJwRTPNAT1PFbY4fjGgA%3D&_svg=3&checksum=e6041bcf0ec6963fe2ea9417aa0441ed001958591fa99b891da6b95ed45649f8&item_author_type=1&sec_uid=MS4wLjABAAAAlBFsxwQO2QyeuN2aSjLD-MheSyYOjpPbkkKgUi_EKFQlIj45MT7yLtgy8iQKBn75&sec_user_id=MS4wLjABAAAAlBFsxwQO2QyeuN2aSjLD-MheSyYOjpPbkkKgUi_EKFQlIj45MT7yLtgy8iQKBn75&share_app_id=1233&share_author_id=7620067551355683853&share_link_id=EC676191-895F-49B4-908A-9D250DC79EEE&share_region=US&share_scene=1&sharer_language=en&social_share_type=5&source=h5_m&timestamp=1774187307&tt_from=more&u_code=f2gaifgfej17jk&ug_btm=b8727%2Cb0&user_id=7620067551355683853&utm_campaign=client_share&utm_medium=ios&utm_source=more" class="btn tiktok" target="_blank">
+<a href="https://www.tiktok.com/@tabsway.kitchen.usa" class="btn tiktok" target="_blank">
 <i class="fa-brands fa-tiktok"></i>
 Follow us on TikTok
 </a>
 
-<a href="https://www.facebook.com/people/Tabsway-Kitchen-USA/61578801310852/?mibextid=wwXIfr&rdid=hShkU11htguEHyYJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Naud3Kb3%2F%3Fmibextid%3DwwXIfr" class="btn facebook" target="_blank">
+<a href="https://www.facebook.com/people/Tabsway-Kitchen-USA/61578801310852/" class="btn facebook" target="_blank">
 <i class="fa-brands fa-facebook"></i>
 Like our Facebook Page
 </a>
 
-<!-- FIXED Snapchat -->
 <a href="https://www.snapchat.com/@tabswaykitchen" class="btn snapchat-dark" target="_blank">
-  <i class="fa-brands fa-snapchat"></i>
-  Add us on Snapchat
-</a>  
-
-<style>
-/* FIX: correct class + better colors */
-.btn.snapchat-dark {
-  background-color: #FFFC00;
-  color: #000;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-}
-
-/* FIX: reduce spacing pushing content down */
-.container {
-  padding-bottom: 20px !important;
-}
-
-.social-buttons {
-  margin-bottom: 10px !important;
-}
-
-.review-promo {
-  margin: 10px 0 !important;
-}
-
-.progress-container {
-  margin: 10px 0 !important;
-}
-
-/* OPTIONAL: tighten overall spacing */
-h1 {
-  margin-bottom: 5px;
-}
-
-.subtitle {
-  margin-bottom: 10px;
-}
-</style>
+<i class="fa-brands fa-snapchat"></i>
+Add us on Snapchat
+</a>
 
 <a href="https://g.page/YOUR_GOOGLE_PLACE_ID/review" class="btn google" target="_blank">
 <i class="fa-solid fa-star"></i>
@@ -106,10 +166,8 @@ Give us a Google Review
 </div>
 
 <div class="review-promo">
-
 ⭐ Leave a Google review and show it to staff  
 to receive <b>5% OFF your next purchase</b>
-
 </div>
 
 <div class="progress-container">
@@ -117,9 +175,7 @@ to receive <b>5% OFF your next purchase</b>
 </div>
 
 <button class="connect" id="connectBtn" disabled onclick="connectWifi()">
-
 Connect to WiFi
-
 </button>
 
 </div>
